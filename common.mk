@@ -8,6 +8,7 @@ common_includes += $(LOCAL_PATH)/../libexternal
 common_includes += $(LOCAL_PATH)/../libqservice
 common_includes += $(LOCAL_PATH)/../libvirtual
 common_includes += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+common_includes += vendor/qcom/opensource/display-frameworks/include
 
 common_header_export_path := qcom/display
 
@@ -38,7 +39,6 @@ kernel_includes :=
 ifeq ($(TARGET_USES_QCOM_BSP),true)
 # This flag is used to compile out any features that depend on framework changes
     common_flags += -DQCOM_BSP
-    common_includes += vendor/qcom/opensource/display-frameworks/include
 endif
 ifneq (,$(filter $(QCOM_BOARD_PLATFORMS),$(TARGET_BOARD_PLATFORM)))
 # This check is to pick the kernel headers from the right location.
