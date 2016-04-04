@@ -22,6 +22,7 @@
 #define HWC_UTILS_H
 
 #define HWC_REMOVE_DEPRECATED_VERSIONS 1
+#include <exhwcomposer_defs.h>
 #include <fcntl.h>
 #include <math.h>
 #include <hardware/hwcomposer.h>
@@ -38,10 +39,6 @@
 #define MAX_NUM_APP_LAYERS 32
 #define MAX_DISPLAY_DIM 2048
 #define MAX_MDP_YUV_COUNT 2
-
-#ifdef QCOM_BSP
-#include <exhwcomposer_defs.h>
-#endif
 
 //Fwrd decls
 struct hwc_context_t;
